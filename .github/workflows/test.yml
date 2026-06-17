@@ -1,9 +1,11 @@
-name: Test Datawrapper
+name: PortWatch → Datawrapper
 on: [push]
 jobs:
-  test:
+  run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install requests
-      - run: python test_connection.py
+      - run: pip install requests pandas
+      - run: python portwatch_dw.py
+        env:
+          DW_TOKEN: ${{ secrets.DW_TOKEN }}
