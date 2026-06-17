@@ -42,5 +42,5 @@ def fetch_chokepoints(days=90):
     return df
 
 print("1. Scarico dati PortWatch...")
-df_raw = fetch_chokepoints(days=90)
+df_raw = fetch_chokepoints(days=7)
 print(f"   {len(df_raw)} record scaricati")
